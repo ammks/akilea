@@ -6,23 +6,25 @@ img{max-width: 100%;height:auto;}
             共通
 =================================*/
 /* フォント */
-h1{
+h1 {
     color:#371C2A;
     font-family: "Bodoni Moda","Shippori Mincho B1", serif;
     font-optical-sizing: auto;
     font-weight: 600;
     font-style: normal;
     font-size: 57px;
+    letter-spacing: 0.2em;
 }
-h2{
+h2 {
     color:#371C2A;
     font-family: "Bodoni Moda","Shippori Mincho B1", serif;
     font-optical-sizing: auto;
     font-weight: 600;
     font-style: normal;
     font-size: 36px;
+    letter-spacing: 0.2em;
 }
-h3{
+h3 {
     color:#371C2A;
     font-family: "Bodoni Moda","Shippori Mincho B1", serif;
     font-optical-sizing: auto;
@@ -30,7 +32,7 @@ h3{
     font-style: normal;
     font-size: 28px;
 }
-h4{
+h4 {
     color:#371C2A;
     font-family: "Bodoni Moda","Shippori Mincho B1", serif;
     font-optical-sizing: auto;
@@ -38,13 +40,18 @@ h4{
     font-style: normal;
     font-size: 22px;
 }
-p{
+p {
     color:#371C2A;
     font-family: "Noto Sans JP", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
     font-size: 16px;
+    line-height: 28px;
+}
+/* aタグ */
+a {
+  text-decoration: none;
 }
 /* スクロール */
 html {
@@ -55,9 +62,6 @@ html {
     max-width: 1920px;
     margin: 0 auto;
     background-color: #F4DCF6;
-    /* vertical-align:middle; 
-    padding: 50px 0;
-    text-align: center; */
 }
 /* view more ボタン */
 .button-more a{
@@ -120,44 +124,7 @@ html {
   width: 100%;
   background: #189FBA;
 }
-/* お問い合わせ＆予約ボタン */
-.button-contact a {
-    position: relative;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 0 auto;
-    border-radius: 9999px;
-    max-width: 250px;
-    padding: 10px 25px;
-    font-family: "Noto Sans Japanese";
-    color: #fff;
-    line-height: 1.8;
-    text-decoration: none;
-    transition: 0.3s ease-in-out;
-    font-weight: 500;
-    background: linear-gradient(270deg, #189FBA 0%, #576fe6 25%, #9844b7 51%, #DD5B9C 100%);
-    background-position: 1% 50%;
-    background-size: 200% auto;
-    transition: all 0.3s ease-out;
-}
-.button-contact a:hover {
-    color: #fff;
-    background-position: 99% 50%;
-}
-.button-contact a:after {
-    content: '';
-    width: 5px;
-    height: 5px;
-    border-top: 3px solid #fff;
-    border-right: 3px solid #fff;
-    transform: rotate(45deg) translateY(-50%);
-    position: absolute;
-    top: 50%;
-    right: 20px;
-    border-radius: 1px;
-    transition: 0.3s ease-in-out;
-}
+
 /* top戻るボタン */
 .button-back a{
   display: flex;
@@ -192,51 +159,7 @@ html {
   border-left: 3px solid #f2f2f2;
   transform: translateY(-5px) rotate(45deg);
 }
-/* 背景グラデ */
-body{
-    background: linear-gradient(249deg, #DD5B9C, #189FBA, #CEF1F7, #FEF2FF, #F5B8CC, #9FD9F6, #FFE9F0);
-    background-size: 1400% 1400%;
-    animation: GradientBackground 15s ease infinite;
-}
-@keyframes GradientBackground {
-    0% {
-    background-position: 0% 50%;
-    }
-
-    50% {
-    background-position: 100% 50%;
-    }
-
-    100% {
-    background-position: 0% 50%;
-    }
-}
-/* 丸玉 */
-/* body, html { 
-  background: rgb(255, 255, 255); margin: 0;
-  height: 200vh;
-}
-canvas { position: absolute; }
-.text {
-  position: absolute;
-  left: 40%;
-  top: 45%;
-  font-family: Roboto;
-  color: rgb(255,255,255);
-  user-select: none;
-}
-.text-light {
-  position: absolute;
-  left: 40%;
-  top: 45%;
-  font-family: Roboto;
-  color: rgb(255,0,0);
-  mix-blend-mode: difference;
-  z-index: 100;
-  user-select: none;
-} */
-
-/* 円背景グラデ */
+/* 丸系グラデ */
 @keyframes blob_rotate {
   0% {
     transform: rotate(0deg);
@@ -249,32 +172,28 @@ canvas { position: absolute; }
   position: fixed;
   left: 0;
   top: 0;
-  z-index: -1; /* 本文より背面へ */
+  z-index: -1;
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  pointer-events: none; /* 背景は操作対象外（クリック等を透過） */
+  pointer-events: none;
 }
 .blob {
   position: absolute;
   left: 50%;
   top: 50%;
-  animation-name: blob_rotate; /* 中心基準で回転させ、擬似要素の相対位置を円運動させる */
-  animation-timing-function: linear; /* 一定速度で回転 */
-  animation-iteration-count: infinite; /* アニメーションを無限に繰り返す */
+  animation-name: blob_rotate;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
 .blob::before {
   content: "";
   display: block;
   position: absolute;
   border-radius: 50%;
-  opacity: 0.4; /* 全体の発光強度（強すぎると本文を圧迫） */
-  transform: translate(-50%, -50%); /* left/top の基準点（左上）を要素の中心に補正 */
-  /* 見た目のコア：
-      - background: radial-gradient（中心が最も濃く、外側でフェードアウト）
-      - サイズ/位置/色/濃度は各 nth-child で個別に指定し、重なりで奥行きを作る */
+  opacity: 0.4;
+  transform: translate(-50%, -50%); 
 }
-/* 各 blob の速度や見た目（サイズ・色・配置・フェード距離）を個別に指定 */
 .blob:nth-child(1) {
   animation-duration: 35000ms;
 }
@@ -287,7 +206,7 @@ canvas { position: absolute; }
 }
 .blob:nth-child(2) {
   animation-duration: 30000ms;
-  animation-direction: reverse; /* ひとつだけ回転の向きを反転 */
+  animation-direction: reverse;
 }
 .blob:nth-child(2)::before {
   left: 250px;
@@ -306,49 +225,218 @@ canvas { position: absolute; }
   height: 700px;
   background: radial-gradient(#DD5B9C 0%, rgba(193, 26, 81, 0) 70%);
 }
-/* ------------------------------
-  レスポンシブ対応
------------------------------- */
-@media (max-width: 767px) {
-  /* 固定配置の背景レイヤー（モバイル調整）
-      - 画面が狭いと blob（丸）が主張しやすいため、半径とオフセットのみ縮小
-      - アニメ速度や不透明度は PC と同一にし、見た目のトーンを揃える
-      - 文字や画像に被り過ぎないよう、端寄りの配置を弱める（left/top を再調整）
-  */
-  .blob:nth-child(1)::before {
-    left: -50px;
-    top: 50px;
-    width: 250px;
-    height: 250px;
-  }
 
-  .blob:nth-child(2)::before {
-    left: 150px;
-    top: -150px;
-    width: 350px;
-    height: 350px;
-  }
-
-  .blob:nth-child(3)::before {
-    left: 450px;
-    top: 150px;
-    width: 500px;
-    height: 500px;
-  }
-}
-
-.pink{
-  color: #DD5B9C;
-  color: silver;
-}
 /* タイトル */
 
-/* ヘッダー */
-
-/* フッター */
+/*=================================
+            ヘッダー
+=================================*/
+.header {
+  width: 98%;
+  position: fixed;
+  margin: 0 auto;
+  height: 70px;
+  border-radius: 9999px;
+  margin: 10px ; 
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(8px); 
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.header-inner {
+  width: 100%;
+  margin: 0 auto;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+}
+.header.hidden {
+  opacity: 0;
+  pointer-events: none; 
+}
+/* ロゴ */
+.header-logo-button {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
+  z-index: 1000;
+}
+.header-logo-text {
+  font-family: "Bodoni Moda", "Noto Sans JP", sans-serif;
+  font-size: 16px;
+  color: #DD5B9C;
+}
+.header-nav{
+  margin-left: auto;
+}
+.header-nav-list {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 50px;
+}
+.header-nav-item {
+  list-style: none;
+}
+.header-nav-item a {
+  font-family: "Bodoni Moda", "Noto Sans JP", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: #DD5B9C;
+}
+/* お問い合わせボタン */
+.header-button a {
+  display: flex;
+  align-items: center;
+  border-radius: 9999px;
+  padding: 10px 25px;
+  color: #fff;
+  text-decoration: none;
+  font-family: "Noto Sans JP", sans-serif;
+  background: linear-gradient(270deg, #189FBA, #576fe6, #9844b7, #DD5B9C);
+  background-size: 200% auto;
+  transition: all 0.3s ease-out;
+}
+.header-button a:hover {
+  background-position: 99% 50%;
+}
+/* ハンバーガーメニュー */
+.header-hamburger {
+  display: none;
+  width: 32px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 2000;
+}
+.header-hamburger span {
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: #189FBA;
+  border-radius: 10px;
+  margin: 5px 0;
+  transition: 0.4s ease;
+}
+.header-hamburger.active span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+.header-hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.header-hamburger.active span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+.header-sp-nav {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 60%;
+  height: 100vh;
+  background: #FFF0F6;
+  padding: 80px 20px 120px;
+  transition: 0.4s ease;
+  z-index: 1500;
+}
+.header-sp-nav.open {
+  right: 0;
+}
+.header-sp-nav .header-nav-list {
+  list-style: none;
+  padding: 0;
+}
+.header-sp-nav .header-nav-item {
+  margin: 18px 0;
+}
+.header-sp-nav .header-nav-item a {
+  font-size: 20px;
+  color: #DD5B9C;
+  text-decoration: none;
+}
+.header-sp-button a {
+  display: block;
+  background: linear-gradient(270deg, #189FBA, #576fe6, #9844b7, #DD5B9C);
+  text-align: center;
+  padding: 12px;
+  border-radius: 9999px;
+  color: #fff;
+  margin-top: 40px;
+}
+/*=================================
+            フッター
+=================================*/
 /*=================================
             top
 =================================*/
+/* 背景グラデ */
+.mv {
+  /* グラデ */
+  background: linear-gradient(249deg, #DD5B9C, #189FBA, #CEF1F7, #FEF2FF, #F5B8CC, #9FD9F6, #FFE9F0);
+  background-size: 1400% 1400%;
+  animation: GradientBackground 15s ease infinite;
+}
+@keyframes GradientBackground {
+  0% {
+  background-position: 0% 50%;
+  }
+
+  50% {
+  background-position: 100% 50%;
+  }
+
+  100% {
+  background-position: 0% 50%;
+  }
+}
+.mv {
+  display: flex;
+  height: 300vh;
+  background: linear-gradient(90deg, #FDE7F5, #A7DCE7);
+}
+
+.mv-left {
+  width: 40%;
+  position: relative;
+}
+
+.mv-right {
+  width: 60%;
+  padding-top: 20vh;
+}
+
+.sticky {
+  position: sticky;
+  top: 20vh; /* 画面上からどの位置に固定するか調整できる */
+}
+
+/* キャッチのデザイン */
+.mv-catch h1 {
+  font-size: 34px;
+  line-height: 1.7;
+  color: silver;
+}
+
+/* 画像共通 */
+.mv-photo {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 1s ease;
+  margin-bottom: 200px; /* 写真の間隔を調整 */
+}
+
+.mv-photo img {
+  width: 80%;
+  border-radius: 16px;
+}
+
+/* フェードイン時のクラス */
+.mv-photo.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /*=================================
             menu
 =================================*/
@@ -373,6 +461,48 @@ canvas { position: absolute; }
 /*=================================
             共通
 =================================*/
+  /* 丸系グラデ */
+  .blob:nth-child(1)::before {
+    left: -50px;
+    top: 50px;
+    width: 250px;
+    height: 250px;
+  }
+  .blob:nth-child(2)::before {
+    left: 150px;
+    top: -150px;
+    width: 350px;
+    height: 350px;
+  }
+  .blob:nth-child(3)::before {
+    left: 450px;
+    top: 150px;
+    width: 500px;
+    height: 500px;
+  }
+/*=================================
+            ヘッダー
+=================================*/
+/* ハンバーガーメニュー */
+  .header-nav,
+  .header-button {
+    display: none;
+  }
+  .header-hamburger {
+    display: block;
+  }
+  .header-nav-list{
+    flex-direction: column;
+    gap: 15px;
+  }
+  .header-sp-button{
+    margin: 0 auto;
+    width: 200px;
+  }
+/*=================================
+            フッター
+=================================*/
+
 /*=================================
             top
 =================================*/

@@ -34,46 +34,110 @@ $(function(){
 
 <body class="wrapper">
     <!-- ヘッダー -->
-    <header>
-        <nav class="nav-content">
-            <ul>
-                <a href="＃"><li>Menu</li></a>
-                <a href="＃"><li>Profile</li></a>
-                <a href="＃"><li>Blog</li></a>
-                <a href="＃"><li>Access</li></a>
-            </ul>
-
+    <header class="header">
+        <div class="header-inner">
+            <!-- ロゴ -->
+            <div class="header-logo">
+                <a class="header-logo-button" href="index.html">
+                <img src="img/header-logo.png" alt="AkiLeaのlogo" width="36" height="36">
+                <p class="header-logo-text">AkiLea</p>
+                </a>
+            </div>
+            <nav class="header-nav">
+                <ul class="header-nav-list">
+                    <li class="header-nav-item"><a href="#">Menu</a></li>
+                    <li class="header-nav-item"><a href="#">Profile</a></li>
+                    <li class="header-nav-item"><a href="#">Blog</a></li>
+                    <li class="header-nav-item"><a href="#">Access</a></li>
+                </ul>
+            </nav>
+            <!-- お問い合わせボタン -->
+            <div class="header-button">
+                <a href="#">お問い合わせ</a>
+            </div>
+            
+            <!-- ハンバーガーボタン（スマホ用） -->
+            <div class="header-hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <!-- ハンバーガーメニュー（メニュー内容） -->
+            <nav class="header-sp-nav" id="spNav">
+                <ul class="header-nav-list">
+                    <li class="header-nav-item"><a href="#">Menu</a></li>
+                    <li class="header-nav-item"><a href="#">Profile</a></li>
+                    <li class="header-nav-item"><a href="#">Blog</a></li>
+                    <li class="header-nav-item"><a href="#">Access</a></li>
+                </ul>
+                <div class="header-sp-button">
+                    <a href="#">お問い合わせ</a>
+                </div>
+            </nav>            
+        </div>
     </header>
     <!-- メイン -->
     <main id="top">
-        <!-- view more ボタン -->
-        <div class="button-more">
-            <a href="#"><p>View More</p></a>
-        </div>
-        <div class="button-contact">
-            <a href="#">お問い合わせ</a>
-        </div>
-        <!-- top戻るボタン -->
-        <div class="button-back">
-            <a href="index.html"><p>topに戻る</p></a>
-        </div>
-        <!-- 丸玉 -->
-        <!-- <h1 class="text-light">This is pretty cool</h1>
-        <script src="https://code.jquery.com/pep/0.4.3/pep.js"></script> -->
-        <h1 class="pink">心と身体を整えて、<br>貴方らしく第二の人生を<br>もっと輝くものに</h1>
+        <section class="mv">
         <!-- 丸系グラデ -->
         <div class="bg-blobs">
             <div class="blob"></div>
             <div class="blob"></div>
             <div class="blob"></div>
         </div>
-        
-        
+        <!-- 左：固定され続けるキャッチ -->
+        <div class="mv-left">
+            <div class="mv-catch sticky">
+            <h1>
+                心と身体を整えて、<br>
+                貴方らしく第二の人生を<br>
+                もっと輝くものに
+            </h1>
+            </div>
+        </div>
+
+        <!-- 右：スクロールで順に出てくる画像たち -->
+        <div class="mv-right">
+
+            <div class="mv-photo photo1">
+            <img src="img/top-mv-main.png" alt="">
+            </div>
+
+            <div class="mv-photo photo2">
+            <img src="img/top-mv-bottle.png" alt="">
+            </div>
+
+            <div class="mv-photo photo3">
+            <img src="img/top-mv-concept.png" alt="">
+            </div>
+
+        </div>
+
+        </section>
+    
+
+
+        <!-- view more ボタン -->
+        <div class="button-more">
+            <a href="#"><p>View More</p></a>
+        </div>
+
+        <!-- top戻るボタン -->
+        <div class="button-back">
+            <a href="index.html"><p>topに戻る</p></a>
+        </div>
     </main>
     <!-- フッター -->
     <footer>
     </footer>
 <!-- JavaScript -->
+<script src="js/hamburger.js"></script>
+<!-- mvスクロール -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="js/scrolltrigger.js"></script>
+<!-- ヘッダー -->
+ <script src="js/header.js"></script>
 <!-- <script src="js/babble.js"></script> -->
 </body>
 </html>
