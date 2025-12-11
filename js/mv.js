@@ -1,12 +1,14 @@
 const photos = document.querySelectorAll('.mv-photo');
 
-const showPhotoOnScroll = () => {
+function revealPhotos() {
   photos.forEach(photo => {
     const rect = photo.getBoundingClientRect();
-    if (rect.top < window.innerHeight * 0.8) {
+    const triggerPoint = window.innerHeight * 0.8;
+
+    if (rect.top < triggerPoint) {
       photo.classList.add('show');
     }
   });
-};
+}
 
-window.addEventListener('scroll', showPhotoOnScroll);
+window.addEventListener('scroll', revealPhotos);
