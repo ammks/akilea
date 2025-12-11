@@ -126,39 +126,52 @@ html {
 }
 
 /* top戻るボタン */
-.button-back a{
+.button-back {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+.button-back.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+.button-back a {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
-  width: 80px;
-  height: 80px;
+  width: 50px;
+  height: 50px;
   background-color: #189FBA;
-  border-radius: 50vh;
-  transition: 0.3s;
+  border-radius: 50%;
+  transition: 0.3s ease;
 }
-.button-back a::after{
-  content: '';
-  width: 7px;
-  height: 7px;
+.button-back a::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
   border-top: 3px solid #fff;
   border-left: 3px solid #fff;
-  transform: rotate(45deg);
-  transition: 0.3s;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg); /* ← 完全中央 */
+  transition: 0.3s ease;
 }
-.button-back p{
-  width: 0px;
-  height: 0px;
-  visibility: hidden;
+.button-back p {
+  display: none;
 }
-.button-back a:hover{
+.button-back a:hover {
   background-color: #DD5B9C;
 }
 .button-back a:hover::after {
-  border-top: 3px solid #f2f2f2;
-  border-left: 3px solid #f2f2f2;
-  transform: translateY(-5px) rotate(45deg);
+  transform: translate(-50%, -60%) rotate(45deg);
 }
+
 /* 丸系グラデ */
 @keyframes blob_rotate {
   0% {
@@ -388,16 +401,19 @@ html {
 footer{
   width: 100%;
   height: auto;
-  background-color: #DD5B9C;
+  /* background-color: #DD5B9C; */
+  background: linear-gradient(249deg, #DD5B9C, #189FBA, #CEF1F7, #F5B8CC, #9FD9F6);
+  background-size: 1400% 1400%;
+  animation: GradientBackground 15s ease infinite;
   padding: 15px;
 }
 .footer-contents{
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   gap: 25px;
 }
-.footer-logo{
+.footer-logo-button{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -409,6 +425,28 @@ footer{
 .footer-logo-text{
   color: #FFE9F0;
 }
+.footer-nav-list {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 50px;
+}
+.footer-nav-item {
+  list-style: none;
+}
+.footer-nav-item a {
+  font-family: "Bodoni Moda", "Noto Sans JP", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: #fff;
+}
+.footer-contact{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .footer-sns{
   display: flex;
   justify-content: center;
@@ -419,11 +457,59 @@ footer{
 .footer-sns-icon{
   width: 50px;
 }
-.footer-copy{
+.footer-button a {
+  display: flex;
+  align-items: center;
+  border-radius: 9999px;
+  padding: 10px 25px;
+  color: #fff;
+  font-family: "Noto Sans JP", sans-serif;
+  background-color: #DD5B9C;
+  background-size: 200% auto;
+  transition: all 0.3s ease-out;
+}
+.footer-button a:hover {
+  background-position: 99% 50%;
+  color: #fff;
+  background-color: #189FBA;
+}
+.footer-sub{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.footer-copy, .footer-privacy a{
   text-align: center;
   color: #fff;
+  font-family: "Noto Sans JP", sans-serif;
   font-size: 12px;
 }
+/* 下層ページの動く流体 */
+.page-header {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+}
+
+.blob-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.page-title {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  margin-top: 120px;
+  font-size: 48px;
+  color: #DD5B9C;
+}
+
+
 /*=================================
             top
 =================================*/
@@ -467,8 +553,8 @@ footer{
 }
 .mv-catch h1 {
   line-height: 1.7;
-  color: silver;
-  /* color: #DD5B9C; */
+  /* color: silver; */
+  color: #DD5B9C;
   text-align: left;
   font-size: 48px;
 }
@@ -690,7 +776,7 @@ footer{
   align-items: center;
   gap: 50px;
 }
-.top-blog-area{
+.top-sns-area{
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -700,6 +786,16 @@ footer{
 }
 .top-sns-area-title{
   color: #189FBA;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.top-sns-area-title .dot{
+  width: 16px;
+  height: 16px;
+  background: #189FBA;
+  border-radius: 50%;
+  display: inline-block;
 }
 .top-blog-contents{
   display: flex;
@@ -723,13 +819,83 @@ footer{
 }
 /* アクセス */
 .access {
-  padding: 8.25% 0;
+  padding: 8.25%;
   background-color: #FEF5FF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
 }
-
+.access-block{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.access-block-title {
+  width: 100%;
+  color: #189FBA;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.access-block-title .dot {
+  width: 16px;
+  height: 16px;
+  background: #189FBA;
+  border-radius: 50%;
+  display: inline-block;
+}
+.access-contents {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+}
+.access-info {
+  width: 50%;
+  margin-left: 25px;
+}
+.access-info dt {
+  display: inline-block;
+  background: #FFE6F0;
+  padding: 6px 12px;
+  border-radius: 8px;
+  color: #DD5B9C;
+}
+.access-info dl dt {
+  font-weight: bold;
+  color: #DD5B9C;
+  margin-top: 25px;
+}
+.access-info dl dd {
+  line-height: 1.7;
+}
+.access-map iframe {
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+.access-contents-online {
+  width: 100%;
+  display:flex ;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 50px;
+  margin-left: 25px;
+}
+.access-online-photo {
+  width: 280px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
 /*=================================
             menu
 =================================*/
+
 /*=================================
             menu詳細
 =================================*/
@@ -792,6 +958,19 @@ footer{
 /*=================================
             フッター
 =================================*/
+footer{
+  padding: 50px;
+}
+.footer-contents{
+  flex-direction: column;
+  gap: 15px;
+}
+.footer-logo-icon{
+  width: 20%;
+}
+.footer-nav-list{
+  gap: 15px;
+}
 
 /*=================================
             top
@@ -905,6 +1084,23 @@ footer{
   flex-direction: column;
   gap: 25px;
 }
+/* アクセス */
+.access-contents {
+  flex-direction: column;
+  gap: 30px;
+}
+.access-info{
+  width: 100%;
+}
+.access-info dl dt {
+  margin-top: 10px;
+}
+.access-contents-online{
+  width: 100%;
+  flex-direction: column;
+}
+/* 予約ボタンが消える謎 */
+
 /*=================================
             menu
 =================================*/
