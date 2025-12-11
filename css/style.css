@@ -385,6 +385,45 @@ html {
 /*=================================
             フッター
 =================================*/
+footer{
+  width: 100%;
+  height: auto;
+  background-color: #DD5B9C;
+  padding: 15px;
+}
+.footer-contents{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+.footer-logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.footer-logo-icon{
+  width: 30%;
+}
+.footer-logo-text{
+  color: #FFE9F0;
+}
+.footer-sns{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  margin: 25px;
+}
+.footer-sns-icon{
+  width: 50px;
+}
+.footer-copy{
+  text-align: center;
+  color: #fff;
+  font-size: 12px;
+}
 /*=================================
             top
 =================================*/
@@ -643,10 +682,45 @@ html {
   width: 100%;
 }
 /* ブログ */
-.top-blog {
+.top-sns {
   padding: 8.25% 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
 }
-
+.top-blog-area{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+.top-sns-area-title{
+  color: #189FBA;
+}
+.top-blog-contents{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 25px;
+}
+.top-blog-content-sub{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+}
+.top-blog-content-sub-tag{
+  width: fit-content;
+  background-color: #DD5B9C;
+  border-radius: 9999px;
+  color: #fff;
+  padding: 5px 8px;
+}
 /* アクセス */
 .access {
   padding: 8.25% 0;
@@ -821,6 +895,15 @@ html {
 }
 .profile-content-name h4, h3 {
   text-align: center;
+}
+/* ブログ */
+.top-blog-contents{
+  flex-direction: column;
+  gap: 25px;
+}
+.top-instagram-contents{
+  flex-direction: column;
+  gap: 25px;
 }
 /*=================================
             menu
