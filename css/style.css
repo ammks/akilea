@@ -31,14 +31,16 @@ h3 {
     font-weight: 600;
     font-style: normal;
     font-size: 25px;
+    letter-spacing: 0.2em;
 }
 h4 {
     color:#371C2A;
     font-family: "Bodoni Moda","Shippori Mincho B1", serif;
     font-optical-sizing: auto;
-    font-weight: 400;
+    font-weight: 600;
     font-style: normal;
     font-size: 20px;
+    letter-spacing: 0.2em;
 }
 p {
     color:#371C2A;
@@ -171,7 +173,6 @@ html {
 .button-back a:hover::after {
   transform: translate(-50%, -60%) rotate(45deg);
 }
-
 /* 丸系グラデ */
 @keyframes blob_rotate {
   0% {
@@ -185,7 +186,7 @@ html {
   position: fixed;
   left: 0;
   top: 0;
-  z-index: 1;
+  z-index: 0;
   width: 100%;
   height: 100vh;
   overflow: hidden;
@@ -485,30 +486,6 @@ footer{
   font-family: "Noto Sans JP", sans-serif;
   font-size: 12px;
 }
-/* 下層ページの動く流体 */
-.page-header {
-  position: relative;
-  height: 300px;
-  overflow: hidden;
-}
-
-.blob-canvas {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-}
-
-.page-title {
-  position: relative;
-  z-index: 2;
-  text-align: center;
-  margin-top: 120px;
-  font-size: 48px;
-  color: #DD5B9C;
-}
-
 
 /*=================================
             top
@@ -895,13 +872,319 @@ footer{
 /*=================================
             menu
 =================================*/
+.under{
+  background-color: #FEF5FF;
+}
+/* 下層トップメニュー */
+.under-title{
+  width: 100%;
+  background-color: #f7d5e5;
+}
+.under-title-text{
+  padding: 150px 0 8.25% 0;
+  text-align: center;
+  color: silver;
+}
+/* パンくずリスト */
+.under-title-panlist{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  padding: 0 15px;
+}
+.under-title-panlist-before a{
+  color: #DD5B9C;
+}
+.under-title-panlist-before a:hover{
+  color: #189FBA;
+}
+.under-contents{
+  padding: 8.25% 0;
+}
+/* 各メニューの料金表 */
+.menu-types{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.menu-type{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3%;
+}
+.menu-type-title-inner {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 50px;
+}
+.menu-type-title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+}
+.menu-type-title-text{
+  color: #189FBA;
+}
+.menu-type-contents{
+  width: 100%;
+}
+.menu-type-content{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.menu-type-sub-text{
+  margin-left:  3%;
+  color: #DD5B9C;
+  text-align: left;
+}
+/* カードエリア */
+.menu-cards{
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 3%;
+}
+.menu-card{
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 50px;
+  /* background-color: #FFE9F0;
+  border: 1px solid #DD5B9C;
+  border-radius: 14px; */
+  padding: 15px;
+}
+.menu-card-photo {
+  width: 100%;
+  height: auto;
+}
+.menu-card-title .dot {
+  position: relative;
+  padding-left: 15px;
+  display: inline-block;
+}
+.menu-card-title .dot::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background: #DD5B9C; 
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%); /* 垂直中央寄せ */
+}
+.menu-card-tag {
+  width: 110px;
+  padding: 3px;
+  border-radius: 9999px;
+}
+.menu-card-tag-text {
+  text-align: center;
+  color: #fff;
+}
+.menu-card-tag.session {
+  background:#DD5B9C;
+}
+.menu-card-tag.course {
+  background:#189FBA;
+}
+.info-row {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+}
+.menu-card-info dt {
+  width: 90px;
+  background-color: #FEF2FF;
+  border: 1px solid #DD5B9C;
+  border-radius: 8px;
+  text-align: center;
+  padding: 3px;
+  margin-top: 5px;
+  font-family: "Noto Sans JP", sans-serif;
+}
+.menu-card-info dd{
+  font-family: "Noto Sans JP", sans-serif;
+}
 
 /*=================================
             menu詳細
 =================================*/
+.menu-blocks{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+.menu-block{
+  width: 70%;
+}
+.menu-block-title{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+}
+.menu-block-line {
+  width: 100%;
+  height: 4px;
+  margin: 10px 0 30px;
+  background: linear-gradient(to right, #DD5B9C, #FAD8EC 70%, rgba(255,255,255,0) 100%);
+  border-radius: 2px;
+}
+.menu-block-photos{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+  margin-top: 25px;
+}
+.menu-block-photo{
+  max-width: 500px;
+}
+.menu-block-text{
+  margin-left: 25px;
+  font-family: "Noto Sans JP", sans-serif;
+}
+.menu-block-step-contents{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 25px;
+}
+.menu-block-step-area{
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.menu-block-step{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: 25px;
+  gap: 5px;
+}
+.menu-block-step-title {
+  width: 130px;
+  text-align: center;
+  background-color: #c64584;
+  color: #fff;
+  border-radius: 14px;
+  padding: 5px;
+}
 /*=================================
             profile
 =================================*/
+#profile .top-concept{
+  background-color: #FEF5FF;
+}
+.profile-introduction{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8.25%;
+}
+.profile-introduction-text{
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 25px;
+}
+.marker{
+	background:linear-gradient(transparent 60%, #189FBA 90%);
+}
+.profile-qualification{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8.25%;
+  margin-top: 50px;
+}
+.profile-qualification-title{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+  
+}
+.profile-qualification-title .dot{
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #DD5B9C;
+}
+.profile-qualification-detail{
+  margin: 0 0 15px 15px;
+}
+/* 会社概要 */
+.profile-company {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-size: 18px;
+  line-height: 1.8;
+}
+.profile-company-text{
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+.company-row {
+  display: flex;
+ align-items: flex-start;
+  gap: 20px;
+  padding: 20px 0;
+  border-bottom: 1px solid #DD5B9C;
+  position: relative;
+}
+.company-row:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(to right, #189FBA, #DD5B9C);
+}
+.company-row dt {
+  width: 120px;
+  color: #189FBA;
+  font-weight: bold;
+  font-family: "Noto Sans JP", sans-serif;
+}
+.company-row dd {
+  flex: 1;
+  margin: 0;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
 /*=================================
             blog
 =================================*/
@@ -971,7 +1254,6 @@ footer{
 .footer-nav-list{
   gap: 15px;
 }
-
 /*=================================
             top
 =================================*/
@@ -1104,12 +1386,57 @@ footer{
 /*=================================
             menu
 =================================*/
+.under-contents{
+  padding: 50px 20px 100px 20px;
+}
+.menu-card{
+  width: 100%;
+  margin-bottom: 25px;
+}
 /*=================================
             menu詳細
 =================================*/
+.menu-block{
+  width: 100%;
+}
+.menu-block-photo{
+  max-width: 400px;
+}
+.menu-block-step-contents{
+  justify-content: center;
+}
 /*=================================
             profile
 =================================*/
+.profile-introduction{
+  flex-direction: column;
+  gap: 25px;
+}
+.profile-introduction-text{
+  width: 100%;
+  gap: 15px;
+}
+.profile-qualification{
+  flex-direction: column;
+}
+.profile-company {
+  padding: 0;
+}
+.company-row {
+  flex-direction: column;
+  gap: 4px;
+}
+.company-row dt {
+  width: 100%;
+}
+.company-row dd {
+  width: 100%;
+}
+.profile-company-text {
+  line-height: 2;
+  margin-bottom: 30px;
+  font-size: 15px;
+}
 /*=================================
             blog
 =================================*/

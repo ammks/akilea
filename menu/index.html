@@ -32,7 +32,7 @@ $(function(){
 
 </head>
 
-<body class="wrapper">
+<body class="wrapper" id="back">
     <!-- ヘッダー -->
     <header class="header">
         <div class="header-inner">
@@ -45,15 +45,15 @@ $(function(){
             </div>
             <nav class="header-nav">
                 <ul class="header-nav-list">
-                    <li class="header-nav-item"><a href="../menu/inedex.html">Menu</a></li>
-                    <li class="header-nav-item"><a href="../profile/inedex.html">Profile</a></li>
-                    <li class="header-nav-item"><a href="../blog/inedex.html">Blog</a></li>
+                    <li class="header-nav-item"><a href="index.html">Menu</a></li>
+                    <li class="header-nav-item"><a href="../profile/index.html">Profile</a></li>
+                    <li class="header-nav-item"><a href="../blog/index.html">Blog</a></li>
                     <li class="header-nav-item"><a href="../index.html#Access">Access</a></li>
                 </ul>
             </nav>
             <!-- お問い合わせボタン -->
             <div class="header-button">
-                <a href="../contact/index/html">お問い合わせ</a>
+                <a href="../contact/index.html">お問い合わせ</a>
             </div>
             
             <!-- ハンバーガーボタン（スマホ用） -->
@@ -65,30 +65,426 @@ $(function(){
             <!-- ハンバーガーメニュー（メニュー内容） -->
             <nav class="header-sp-nav" id="spNav">
                 <ul class="header-nav-list">
-                    <li class="header-nav-item"><a href="../menu/inedex.html">Menu</a></li>
-                    <li class="header-nav-item"><a href="../profile/inedex.html">Profile</a></li>
-                    <li class="header-nav-item"><a href="../blog/inedex.html">Blog</a></li>
+                    <li class="header-nav-item"><a href="index.html">Menu</a></li>
+                    <li class="header-nav-item"><a href="../profile/index.html">Profile</a></li>
+                    <li class="header-nav-item"><a href="../blog/index.html">Blog</a></li>
                     <li class="header-nav-item"><a href="../index.html#Access">Access</a></li>
                 </ul>
                 <div class="header-sp-button">
-                    <a href="../contact/index/html">お問い合わせ</a>
+                    <a href="../contact/index.html">お問い合わせ</a>
                 </div>
             </nav>            
         </div>
     </header>
     <!-- メイン -->
-    <main id="top">
         <!-- 丸系グラデ -->
-        <div class="bg-blobs">
-            <div class="blob"></div>
-            <div class="blob"></div>
-            <div class="blob"></div>
-        </div>
-    <!-- 下層トップメニュー -->
-    <section class="page-header" data-blob-color="#00E5FF">
-        <canvas id="blob-canvas"></canvas>
-        <h1 class="page-title">Menu</h1>
-    </section>
+    <!-- <div class="bg-blobs">
+        <div class="blob"></div>
+        <div class="blob"></div>
+        <div class="blob"></div>
+        </div> -->
+    <main>
+        <section class="under">
+            <!-- 下層トップメニュー -->
+            <div class="under-title">
+                <h1 class="under-title-text">Menu</h1>
+            </div>
+            <!-- パンくずリスト -->
+            <div class="under-title-panlist">
+                <p class="under-title-panlist-before"><a href="../index.html">TOP</a></p>
+                <p>&gt;</p>
+                <p class="under-title-panlist-now">Menu</p>
+            </div>
+            <!-- メニュー3パターン -->
+            <section class="under-contents">
+                <div class="section-title">
+                    <div class="section-title-inner">
+                        <img class="section-title-inner-photo" src="../img/title-turquoise.png" alt="ターコイズ色のカラーボトル" width="14" height="39">
+                        <h2 class="section-title-inner-text">理想から探す</h2>
+                    </div>
+                </div>
+                <div class="menu-contents">
+                    <div class="menu-content">
+                        <h3 class="menu-content-type">自分の内面や才能を知りたい方へ</h3>
+                        <div class="menu-content-inner">
+                            <img class="menu-content-inner-photo" src="../img/top-menu-color.png" alt="カラーセラピーのカラーボトル" width="480" height="273">            
+                            <div class="menu-content-inner-titles"> 
+                                <h4 class="menu-content-inner-title">カラーセラピーセンション&講座</h4>
+                                <h4 class="menu-content-inner-title">カラータイプ診断&講座</h4>
+                            </div>
+                            <p class="menu-content-inner-text">色は心の鏡。スピリチュアルではなく、色彩心理から本心・思考・価値観を整理し、あなたらしさに気づくためのメニューです。子育て向けの講座もございます。</p>
+                        </div>
+                        <div class="button-more">
+                            <a href="#color"><p>View More</p></a>
+                        </div>
+                    </div>
+                    <div class="menu-content">
+                        <h3 class="menu-content-type">外見の美しさを引き出したい方へ</h3>
+                        <div class="menu-content-inner">
+                            <img class="menu-content-inner-photo" src="../img/top-menu-personal.png" alt="パーソナルカラー診断の布" width="480" height="273">            
+                            <div class="menu-content-inner-titles"> 
+                                <h4 class="menu-content-inner-title">パーソナルカラー診断</h4>
+                                <h4 class="menu-content-inner-title">美Body診断（骨格診断）</h4>
+                            </div>
+                            <p class="menu-content-inner-text">似合う色とスタイルを知ることで、あなたの魅力を自然に引き出すメニューです。毎日の装いに自信が生まれます。</p>
+                        </div>
+                        <div class="button-more">
+                            <a href="#personal"><p>View More</p></a>
+                        </div>
+                    </div>
+                    <div class="menu-content">
+                        <h3 class="menu-content-type">身体の内側から美しさを整えたい方へ</h3>
+                        <div class="menu-content-inner">
+                            <img class="menu-content-inner-photo" src="../img/top-menu-nutrition.png" alt="栄養のある野菜" width="480" height="273">            
+                            <div class="menu-content-inner-titles"> 
+                                <h4 class="menu-content-inner-title">栄養カウンセリング</h4>
+                                <!-- <h4 class="menu-content-inner-title">カラータイプ診断&講座</h4> -->
+                            </div>
+                            <p class="menu-content-inner-text">身体の状態を整えることは、心と外見にもつながります。薬剤師が専門知識にもとづき、あなたの美の土台を育てます。</p>
+                        </div>
+                        <div class="button-more">
+                            <a href="#nutrition"><p>View More</p></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- 各メニューの料金表 -->
+            <section class="under-contents">
+                <div class="section-title-inner">
+                    <img class="section-title-inner-photo" src="../img/title-turquoise.png" alt="ターコイズ色のカラーボトル" width="14" height="39">
+                    <h2 class="section-title-inner-text">各種メニュー</h2>
+                </div>
+                <section class="menu-type" id="color">
+                    <div class="menu-type-title-inner">
+                        <div class="menu-type-title">
+                            <img class="menu-type-title-photo" src="../img/title-pink.png" alt="ピンク色のカラーボトル" width="14" height="39">
+                            <h3 class="menu-type-title-text">自分の内面や才能を知りたい方へ</h3>
+                        </div>
+                        <p class="menu-type-title-text-sub">色は心の鏡。スピリチュアルではなく、色彩心理から本心・思考・価値観を整理し、あなたらしさに気づくためのメニューです。子育て向けの講座もございます。</p>
+                    </div>
+                    <div class="menu-type-contents">
+                        <div class="menu-type-content">
+                            <h3 class="menu-type-sub-text">カラーセラピーセッション＆講座</h3>
+                            <div class="menu-cards">
+                                <div class="menu-card">
+                                    <h4 class="menu-card-title"><span class="dot">カラーセラピーセッション</span></h4>                                   
+                                    <img class="menu-card-photo" src="../img/menu-card-colortherapy-session.png" alt="カラーセラピーセッション風景" width="469" height="285">
+                                    <div class="menu-card-tag session">
+                                        <p class="menu-card-tag-text">セッション</p>
+                                    </div>                                     
+                                    <p class="menu-card-text">色彩心理学をベースに、選んだ色から“今の心”をやさしく紐解くセッションです。無意識に眠る本音や感情に気づき、心と身体のバランスを整えていきます。気持ちを軽くしたい時や、前へ進むきっかけが欲しい方におすすめです。</p>
+                                    <dl class="menu-card-info">
+                                        <div class="info-row">
+                                            <dt>料金</dt>
+                                            <dd>¥6,600 / 45分、¥11,100 / 90分</dd>
+                                        </div>
+                                        <div class="info-row">
+                                            <dt>所要時間</dt>
+                                            <dd>45分 または 90分</dd>
+                                        </div>
+                                        <div class="info-row">
+                                            <dt>場所</dt>
+                                            <dd>対面 or オンライン（Zoom）</dd>
+                                        </div>
+                                    </dl>                        
+                                    <div class="button-more">
+                                        <a href="../color-therapy-session/index.html"><p>View More</p></a>
+                                    </div>
+                                </div>
+                                <div class="menu-card">
+                                    <h4 class="menu-card-title"><span class="dot">カラーセラピーセッション</span></h4>                                   
+                                    <img class="menu-card-photo" src="../img/menu-card-colortherapy-course.png" alt="カラーセラピスト養成講座の教材" width="469" height="285">
+                                    <div class="menu-card-tag course">
+                                        <p class="menu-card-tag-text">講座</p>
+                                    </div>                                     
+                                    <p class="menu-card-text">カラーセラピーの基本を1日で効率よく学び、色彩心理の理解を深めます。自分を整えながら、誰かの心にも寄り添えるスキルが身につく講座です。はじめての方でも安心してセラピストを目指せます。</p>
+                                    <dl class="menu-card-info">
+                                        <div class="info-row">
+                                            <dt>料金</dt>
+                                            <dd>￥20,900円（14本ボトル、テキスト、認定料込み）</dd>
+                                        </div>
+                                        <div class="info-row">
+                                            <dt>所要時間</dt>
+                                            <dd>5時間（分割可）</dd>
+                                        </div>
+                                        <div class="info-row">
+                                            <dt>場所</dt>
+                                            <dd>対面 or オンライン（Zoom）</dd>
+                                        </div>
+                                    </dl>
+                                    <div class="button-more">
+                                        <a href="../color-therapy-session/index.html"><p>View More</p></a>
+                                    </div>
+                                </div>
+                                <div class="menu-card">
+                                    <h4 class="menu-card-title"><span class="dot">才能発見Grace講座:Step1.才能発見Graceセッション</span></h4>                                   
+                                    <img class="menu-card-photo" src="../img/menu-card-colortherapy-step1.png" alt="Step1.才能発見Graceセッションの教材" width="469" height="285">
+                                    <div class="menu-card-tag session">
+                                        <p class="menu-card-tag-text">セッション</p>
+                                    </div>                                     
+                                    <p class="menu-card-text">12の才能カードとGraceノートを使い、自分の本来の才能を発見するセッションです。内面と丁寧に向き合い、“私の純度”を高めるためのワークを行います。人生の方向性を整えたい方におすすめの自己理解セッションです。</p>
+                                    <dl class="menu-card-info">
+                                        <div class="info-row">
+                                            <dt>料金</dt>
+                                            <dd>￥19,250円（教材込み）</dd>
+                                        </div>
+                                        <div class="info-row">
+                                            <dt>所要時間</dt>
+                                            <dd>90分~120分</dd>
+                                        </div>
+                                        <div class="info-row">
+                                            <dt>場所</dt>
+                                            <dd>対面 or オンライン（Zoom）</dd>
+                                        </div>
+                                    </dl>
+                                    <div class="button-more">
+                                        <a href="../color-therapy-session/index.html"><p>View More</p></a>
+                                    </div>
+                                </div>   
+                                <div class="menu-card">
+                                    <h4 class="menu-card-title"><span class="dot">才能発見Grace講座:Step2.人の才能発見講座</span></h4>                                   
+                                    <img class="menu-card-photo" src="../img/menu-card-colortherapy-step2.png" alt="Step2.人の才能発見講座の教材" width="469" height="285">
+                                    <div class="menu-card-tag course">
+                                        <p class="menu-card-tag-text">講座</p>
+                                    </div>                                     
+                                    <p class="menu-card-text">四元素や気質などの理論を学び、12のキャラクター理解を深める講座です。家族や友人など、周囲の人の才能にも気づける視点とコツが身につきます。会話や観察から才能を見つける方法や、心理学的な注意点も学びます。</p>
+                                    <dl class="menu-card-info">
+                                        <div class="info-row">
+                                            <dt>料金</dt>
+                                            <dd>￥30,800円（教材・修了証込み）</dd>
+                                        </div>
+                                        <div class="info-row">
+                                            <dt>所要時間</dt>
+                                            <dd>3時間</dd>
+                                        </div>
+                                        <div class="info-row">
+                                            <dt>場所</dt>
+                                            <dd>対面 or オンライン（Zoom）</dd>
+                                        </div>
+                                    </dl>
+                                    <div class="button-more">
+                                        <a href="../color-therapy-session/index.html"><p>View More</p></a>
+                                    </div>
+                                </div>                           
+                            </div>                            
+                        </div>
+                        <div class="menu-type-content">
+                            <h3 class="menu-type-sub-text">カラータイプ診断＆講座</h3>
+                            <div class="menu-cards">
+                                <div class="menu-card">
+                                    <h4 class="menu-card-title"><span class="dot">カラータイプ診断</span></h4>                                   
+                                    <img class="menu-card-photo" src="../img/menu-card-colortype-session.png" alt="カラータイプ診断セッション教材" width="469" height="285">
+                                    <div class="menu-card-tag session">
+                                        <p class="menu-card-tag-text">セッション</p>
+                                    </div>                                     
+                                    <p class="menu-card-text">色彩心理をもとに、人の個性や思考・行動傾向を読み解く診断です。13色の心理パターンから“あなたらしさ”を可視化し、日常のコミュニケーションに役立てます。自分を知り、人との関わりをより良くしたい方におすすめです。</p>
+                                    <dl class="menu-card-info">
+                                        <div class="info-row">
+                                            <dt>料金</dt>
+                                            <dd>￥29,700円（教材・認定証込み）</dd>
+                                        </div>
+                                        <div class="info-row">
+                                            <dt>所要時間</dt>
+                                            <dd>4時間（分割可）</dd>
+                                        </div>
+                                        <div class="info-row">
+                                            <dt>場所</dt>
+                                            <dd>対面 or オンライン（Zoom）</dd>
+                                        </div>
+                                    </dl>
+                                    <div class="button-more">
+                                        <a href="../color-therapy-session/index.html"><p>View More</p></a>
+                                    </div>
+                                </div>
+                                <div class="menu-card">
+                                    <h4 class="menu-card-title"><span class="dot">カラータイプアドバイザー認定講座</span></h4>                                   
+                                    <img class="menu-card-photo" src="../img/menu-card-colortype-course.png" alt="カラータイプアドバイザー認定講座の教材" width="469" height="285">
+                                    <div class="menu-card-tag course">
+                                        <p class="menu-card-tag-text">講座</p>
+                                    </div>                                     
+                                    <p class="menu-card-text">色彩心理をベースに、人の性格や行動を4タイプに分けて理解する理論を学ぶ講座です。自分や他者のタイプ診断ができるようになり、コミュニケーション力が大きく高まります。カラータイプ®アドバイザー資格が取得できます。</p>
+                                    <dl class="menu-card-info">
+                                        <div class="info-row">
+                                            <dt>料金</dt>
+                                            <dd>￥29,700円（教材・認定証込み）</dd>
+                                        </div>
+                                        <div class="info-row">
+                                            <dt>所要時間</dt>
+                                            <dd>4時間（分割可）</dd>
+                                        </div>
+                                        <div class="info-row">
+                                            <dt>場所</dt>
+                                            <dd>対面 or オンライン（Zoom）</dd>
+                                        </div>
+                                    </dl>
+                                    <div class="button-more">
+                                        <a href="../color-therapy-session/index.html"><p>View More</p></a>
+                                    </div>
+                                </div>
+                                <div class="menu-card">
+                                    <h4 class="menu-card-title"><span class="dot">才能発見Grace講座:Step1.才能発見Graceセッション</span></h4>                                   
+                                    <img class="menu-card-photo" src="../img/menu-card-colortype-homeru.png" alt="才能発見Grace講座:Step1.才能発見Graceセッションの教材" width="469" height="285">
+                                    <div class="menu-card-tag course">
+                                        <p class="menu-card-tag-text">講座</p>
+                                    </div>                                     
+                                    <p class="menu-card-text">子どもを伸ばす“上手なほめ方・しかり方”を学べる、ママに人気の講座です。その日から変化が見える実践的なメソッドで、親子の関係がぐっと良くなります。多くの子どもを見てきた経験から生まれた、信頼できる内容です。</p>
+                                    <dl class="menu-card-info">
+                                        <div class="info-row">
+                                            <dt>料金</dt>
+                                            <dd>￥5,500円（教材込み）</dd>
+                                        </div>
+                                        <div class="info-row">
+                                            <dt>所要時間</dt>
+                                            <dd>90分</dd>
+                                        </div>
+                                        <div class="info-row">
+                                            <dt>場所</dt>
+                                            <dd>対面 or オンライン（Zoom）</dd>
+                                        </div>
+                                    </dl>
+                                    <div class="button-more">
+                                        <a href="../color-therapy-session/index.html"><p>View More</p></a>
+                                    </div>
+                                </div>   
+                                <div class="menu-card">
+                                    <h4 class="menu-card-title"><span class="dot">才能発見Grace講座:Step2.人の才能発見講座</span></h4>                                   
+                                    <img class="menu-card-photo" src="../img/menu-card-colortype-study.png" alt="才能発見Grace講座:Step2.人の才能発見講座の教材" width="469" height="285">
+                                    <div class="menu-card-tag course">
+                                        <p class="menu-card-tag-text">講座</p>
+                                    </div>                                     
+                                    <p class="menu-card-text">新しい時代は、一人で全部できるではなくグループでやる時代です。自分で考えて、自分の意見を言える子どもを育てる講座です。子どもの未来に役立つ、今の教育にぴったりの学びが得られます。</p>
+                                    <dl class="menu-card-info">
+                                        <div class="info-row">
+                                            <dt>料金</dt>
+                                            <dd>￥5,500円（教材込み）</dd>
+                                        </div>
+                                        <div class="info-row">
+                                            <dt>所要時間</dt>
+                                            <dd>90分</dd>
+                                        </div>
+                                        <div class="info-row">
+                                            <dt>場所</dt>
+                                            <dd>対面 or オンライン（Zoom）</dd>
+                                        </div>
+                                    </dl>
+                                    <div class="button-more">
+                                        <a href="../color-therapy-session/index.html"><p>View More</p></a>
+                                    </div>
+                                </div>                           
+                            </div>                            
+                        </div>                        
+                    </div>
+                </section>
+                <section class="menu-type" id="personal">
+                    <div class="menu-type-title-inner">
+                        <div class="menu-type-title">
+                            <img class="menu-type-title-photo" src="../img/title-pink.png" alt="ピンク色のカラーボトル" width="14" height="39">
+                            <h3 class="menu-type-title-text">外見の美しさを引き出したい方へ</h3>
+                        </div>
+                        <p class="menu-type-title-text-sub">似合う色とスタイルを知ることで、あなたの魅力を自然に引き出すメニューです。毎日の装いに自信が生まれます。</p>
+                    </div>
+                    <div class="menu-type-contents">
+                        <div class="menu-type-content">
+                            <h3 class="menu-type-sub-text">パーソナル診断</h3>
+                            <div class="menu-cards">
+                                <div class="menu-card">
+                                    <h4 class="menu-card-title"><span class="dot">パーソナルカラー診断</span></h4>                                   
+                                    <img class="menu-card-photo" src="../img/menu-card-personal-color.png" alt="パーソナルカラー診断の布" width="469" height="285">
+                                    <div class="menu-card-tag session">
+                                        <p class="menu-card-tag-text">セッション</p>
+                                    </div>                                     
+                                    <p class="menu-card-text">生まれ持った「あなたに最も似合う色」を導き出す診断です。 顔色が明るく見え、印象がよくなる色を知ることで、ファッションやメイクがぐっと楽に。自分らしい美しさを引き出したい方におすすめです。</p>
+                                    <dl class="menu-card-info">
+                                        <div class="info-row">
+                                            <dt>料金</dt>
+                                            <dd>￥11,000円（税込み）</dd>
+                                        </div>
+                                        <div class="info-row">
+                                            <dt>所要時間</dt>
+                                            <dd>60分〜90分</dd>
+                                        </div>
+                                        <div class="info-row">
+                                            <dt>場所</dt>
+                                            <dd>対面 or オンライン（Zoom）</dd>
+                                        </div>
+                                    </dl>
+                                    <div class="button-more">
+                                        <a href="#personal"><p>View More</p></a>
+                                    </div>
+                                </div>
+                                <div class="menu-card">
+                                    <h4 class="menu-card-title"><span class="dot">美Body診断（骨格診断）</span></h4>                                   
+                                    <img class="menu-card-photo" src="../img/menu-card-personal-body.png" alt="美Body診断（骨格診断）の教材" width="469" height="285">
+                                    <div class="menu-card-tag session">
+                                        <p class="menu-card-tag-text">セッション</p>
+                                    </div>                                     
+                                    <p class="menu-card-text">体の骨格やラインを分析し、スタイルを最も美しく見せる服の形や素材を知る診断です。似合うデザインが分かることで、体型をカバーしつつ魅力を最大限に引き出せます。あなたに合ったファッションが分かります。</p>
+                                    <dl class="menu-card-info">
+                                        <div class="info-row">
+                                            <dt>料金</dt>
+                                            <dd>￥11,000円（税込み）</dd>
+                                        </div>
+                                        <div class="info-row">
+                                            <dt>所要時間</dt>
+                                            <dd>60分〜90分</dd>
+                                        </div>
+                                        <div class="info-row">
+                                            <dt>場所</dt>
+                                            <dd>対面 or オンライン（Zoom）</dd>
+                                        </div>
+                                    </dl>
+                                    <div class="button-more">
+                                        <a href="#personal"><p>View More</p></a>
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>                     
+                    </div>
+                </section>
+                <section class="menu-type" id="nutrition">
+                    <div class="menu-type-title-inner">
+                        <div class="menu-type-title">
+                            <img class="menu-type-title-photo" src="../img/title-pink.png" alt="ピンク色のカラーボトル" width="14" height="39">
+                            <h3 class="menu-type-title-text">身体の内側から美しさを整えたい方へ</h3>
+                        </div>
+                        <p class="menu-type-title-text-sub">身体の状態を整えることは、心と外見にもつながります。薬剤師が専門知識にもとづき、あなたの美の土台を育てます。</p>
+                    </div>
+                    <div class="menu-type-contents">
+                        <div class="menu-type-content">
+                            <h3 class="menu-type-sub-text">栄養カウンセリング</h3>
+                            <div class="menu-cards">
+                                <div class="menu-card">
+                                    <h4 class="menu-card-title"><span class="dot">薬剤師による栄養カウンセリング</span></h4>                                   
+                                    <img class="menu-card-photo" src="../img/menu-card-nutrition.png" alt="パーソナルカラー診断の布" width="469" height="285">
+                                    <div class="menu-card-tag session">
+                                        <p class="menu-card-tag-text">セッション</p>
+                                    </div>                                     
+                                    <p class="menu-card-text">栄養学をもとに、健康的な食習慣づくりをサポートするカウンセリングです。食べたもので身体はつくられるという視点から、薬に頼らない健やかな体を目指します。日々の不調を改善し、自分らしい人生を元気に楽しみたい方におすすめです。</p>
+                                    <dl class="menu-card-info">
+                                        <div class="info-row">
+                                            <dt>料金</dt>
+                                            <dd>￥9,000円（税込み）</dd>
+                                        </div>
+                                        <div class="info-row">
+                                            <dt>所要時間</dt>
+                                            <dd>60分</dd>
+                                        </div>
+                                        <div class="info-row">
+                                            <dt>場所</dt>
+                                            <dd>対面 or オンライン（Zoom）</dd>
+                                        </div>
+                                    </dl>
+                                    <div class="button-more">
+                                        <a href="#personal"><p>View More</p></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                     
+                    </div>
+                </section>            
+            </section>
+        </section>
+    
 
 
 
@@ -98,7 +494,7 @@ $(function(){
 
         <!-- top戻るボタン -->
         <div class="button-back" id="backToTop">
-            <a href="../index.html"><p>topに戻る</p></a>
+            <a href="#back"><p>topに戻る</p></a>
         </div>
     </main>
     <!-- フッター -->
@@ -112,14 +508,14 @@ $(function(){
             </div>
             <nav class="footer-nav">
                 <ul class="footer-nav-list">
-                    <li class="footer-nav-item"><a href="../menu/inedex.html">Menu</a></li>
-                    <li class="footer-nav-item"><a href="../profile/inedex.html">Profile</a></li>
-                    <li class="footer-nav-item"><a href="../blog/inedex.html">Blog</a></li>
+                    <li class="footer-nav-item"><a href="index.html">Menu</a></li>
+                    <li class="footer-nav-item"><a href="../profile/index.html">Profile</a></li>
+                    <li class="footer-nav-item"><a href="../blog/index.html">Blog</a></li>
                     <li class="footer-nav-item"><a href="../index.html#Access">Access</a></li>
                 </ul>
             </nav> 
             <div class="footer-button">
-                <a href="../contact/index/html">お問い合わせ</a>
+                <a href="../contact/index.html">お問い合わせ</a>
             </div>      
             <div class="footer-sns">
                 <img class="footer-sns-icon" src="../img/footer-instagram.png" alt="Instagramのアイコン" width="66" height="66">

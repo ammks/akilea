@@ -32,7 +32,7 @@ $(function(){
 
 </head>
 
-<body class="wrapper">
+<body class="wrapper" id="back">
     <!-- ヘッダー -->
     <header class="header">
         <div class="header-inner">
@@ -45,9 +45,9 @@ $(function(){
             </div>
             <nav class="header-nav">
                 <ul class="header-nav-list">
-                    <li class="header-nav-item"><a href="../menu/inedex.html">Menu</a></li>
-                    <li class="header-nav-item"><a href="../profile/inedex.html">Profile</a></li>
-                    <li class="header-nav-item"><a href="../blog/inedex.html">Blog</a></li>
+                    <li class="header-nav-item"><a href="index.html">Menu</a></li>
+                    <li class="header-nav-item"><a href="../profile/index.html">Profile</a></li>
+                    <li class="header-nav-item"><a href="../blog/index.html">Blog</a></li>
                     <li class="header-nav-item"><a href="../index.html#Access">Access</a></li>
                 </ul>
             </nav>
@@ -65,9 +65,9 @@ $(function(){
             <!-- ハンバーガーメニュー（メニュー内容） -->
             <nav class="header-sp-nav" id="spNav">
                 <ul class="header-nav-list">
-                    <li class="header-nav-item"><a href="../menu/inedex.html">Menu</a></li>
-                    <li class="header-nav-item"><a href="../profile/inedex.html">Profile</a></li>
-                    <li class="header-nav-item"><a href="../blog/inedex.html">Blog</a></li>
+                    <li class="header-nav-item"><a href="index.html">Menu</a></li>
+                    <li class="header-nav-item"><a href="../profile/index.html">Profile</a></li>
+                    <li class="header-nav-item"><a href="../blog/index.html">Blog</a></li>
                     <li class="header-nav-item"><a href="../index.html#Access">Access</a></li>
                 </ul>
                 <div class="header-sp-button">
@@ -77,19 +77,35 @@ $(function(){
         </div>
     </header>
     <!-- メイン -->
-    <main id="top">
         <!-- 丸系グラデ -->
-        <div class="bg-blobs">
-            <div class="blob"></div>
-            <div class="blob"></div>
-            <div class="blob"></div>
-        </div>
+    <!-- <div class="bg-blobs">
+        <div class="blob"></div>
+        <div class="blob"></div>
+        <div class="blob"></div>
+        </div> -->
+    <main>
+        <section class="#">
+            <!-- 下層トップメニュー -->
+            <div class="under-title">
+                <h1 class="under-title-text">Menu</h1>
+            </div>
+            <!-- パンくずリスト -->
+            <div class="under-title-panlist">
+                <p class="under-title-panlist-before"><a href="../index.html">TOP</a></p>
+                <p>&gt;</p>
+                <p>Menu</p>
+            </div>
+            <div class="section-title-inner">
+                <img class="section-title-inner-photo" src="../img/title-turquoise.png" alt="ターコイズ色のカラーボトル" width="14" height="39">
+                <h2 class="section-title-inner-text">理想から探す</h2>
+            </div>
+        </section>
+                
         
-
-
-        <!-- top戻るボタン -->
+        
+            <!-- top戻るボタン -->
         <div class="button-back" id="backToTop">
-            <a href="../index.html"><p>topに戻る</p></a>
+            <a href="#back"><p>topに戻る</p></a>
         </div>
     </main>
     <!-- フッター -->
@@ -103,9 +119,9 @@ $(function(){
             </div>
             <nav class="footer-nav">
                 <ul class="footer-nav-list">
-                    <li class="footer-nav-item"><a href="../menu/inedex.html">Menu</a></li>
-                    <li class="footer-nav-item"><a href="../profile/inedex.html">Profile</a></li>
-                    <li class="footer-nav-item"><a href="../blog/inedex.html">Blog</a></li>
+                    <li class="footer-nav-item"><a href="index.html">Menu</a></li>
+                    <li class="footer-nav-item"><a href="../profile/index.html">Profile</a></li>
+                    <li class="footer-nav-item"><a href="../blog/index.html">Blog</a></li>
                     <li class="footer-nav-item"><a href="../index.html#Access">Access</a></li>
                 </ul>
             </nav> 
@@ -132,6 +148,7 @@ $(function(){
 <script src="../js/mv.js"></script>
 <!-- トップに戻る -->
 <script src="../js/backtotop.js"></script>
-<!-- <script src="js/babble.js"></script> -->
+<!-- 動く流体 -->
+<script src="../js/babble.js"></script>
 </body>
 </html>
