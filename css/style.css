@@ -319,6 +319,9 @@ html {
   color: #DD5B9C;
   /* color: #371C2A; */
 }
+.header-nav-item a:hover{
+  color: #189FBA;
+}
 /* お問い合わせボタン */
 .header-button a {
   display: flex;
@@ -421,10 +424,10 @@ footer{
   gap: 15px;
 }
 .footer-logo-icon{
-  width: 30%;
+  width: 20%;
 }
 .footer-logo-text{
-  color: #FFE9F0;
+  color: #fff;
 }
 .footer-nav-list {
   display: flex;
@@ -441,6 +444,9 @@ footer{
   font-weight: 700;
   letter-spacing: 0.2em;
   color: #fff;
+}
+.footer-nav-item a:hover{
+  color: #189FBA;
 }
 .footer-contact{
   display: flex;
@@ -481,12 +487,14 @@ footer{
   align-items: center;
 }
 .footer-copy, .footer-privacy a{
+  font-family: "Bodoni Moda", "Noto Sans JP", sans-serif;
   text-align: center;
   color: #fff;
-  font-family: "Noto Sans JP", sans-serif;
   font-size: 12px;
 }
-
+.footer-privacy a:hover{
+  color: #189FBA;
+}
 /*=================================
             top
 =================================*/
@@ -523,7 +531,7 @@ footer{
   display: flex;
 }
 .mv-catch {
-  width: 50%;
+  width: 60%;
   position: sticky;
   top: 250px;
   height: fit-content;
@@ -650,7 +658,7 @@ footer{
 /* お客様からの声 */
 .top-voice{
   width: 100%;
-  padding: 8.25% 0; 
+  padding: 8.25%; 
   background-color: #fff;
 }
 .voice-scroll {
@@ -878,7 +886,31 @@ footer{
 /* 下層トップメニュー */
 .under-title{
   width: 100%;
-  background-color: #f7d5e5;
+}
+.under-title.red{
+  background: linear-gradient(60deg, #CA1A35, #F2ACB6, #DD589C);
+  background-size: 600% 600%;
+  animation: GradientBackground 15s ease infinite;
+}
+.under-title.yellow{
+  background: linear-gradient(60deg, #EEE907, #E5E4BD, #189FBA);
+  background-size: 600% 600%;
+  animation: GradientBackground 15s ease infinite;
+}
+.under-title.green{
+  background: linear-gradient(60deg, #1DC747, #B8E3C3, #189FBA);
+  background-size: 600% 600%;
+  animation: GradientBackground 15s ease infinite;
+}
+.under-title.blue{
+  background: linear-gradient(60deg, #281DC7, #C2C1D5, #189FBA);
+  background-size: 600% 600%;
+  animation: GradientBackground 15s ease infinite;
+}
+.under-title.pink{
+  background: linear-gradient(60deg, #C8189A, #ECC1E1, #DE5AA9);
+  background-size: 600% 600%;
+  animation: GradientBackground 15s ease infinite;
 }
 .under-title-text{
   padding: 150px 0 8.25% 0;
@@ -1026,7 +1058,38 @@ footer{
 .menu-card-info dd{
   font-family: "Noto Sans JP", sans-serif;
 }
-
+/* 固定予約ボタン */
+.fixed-reserve-button {
+  position: fixed;
+  right: 20px;          
+  bottom: 100px;
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+.fixed-reserve-button.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+.fixed-reserve-button a {
+  display: block;
+  writing-mode: vertical-rl;
+  padding: 15px 10px;
+  background: #189FBA;
+  border: 2px solid #DD5B9C;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 14px;
+  font-size: 16px;
+  letter-spacing: 0.1em;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+.fixed-reserve-button a:hover {
+  background: #189FBA;
+  transform: translateY(-5px);
+}
 /*=================================
             menu詳細
 =================================*/
@@ -1158,7 +1221,7 @@ footer{
 }
 .company-row {
   display: flex;
- align-items: flex-start;
+  align-items: flex-start;
   gap: 20px;
   padding: 20px 0;
   border-bottom: 1px solid #DD5B9C;
@@ -1184,17 +1247,229 @@ footer{
   margin: 0;
   font-family: "Noto Sans JP", sans-serif;
 }
-
 /*=================================
             blog
 =================================*/
+.blog-contents-area {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px; 
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  justify-items: center;
+}
+/* 検索欄エリア */
+.blog-search-area {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  margin: 40px 0;
+}
+#blog-search-input {
+  width: 420px;
+  padding: 12px 18px;
+  border: 2px solid #D46CA8;
+  border-radius: 18px 0 0 18px;
+  outline: none;
+  font-size: 16px;
+}
+#blog-search-btn {
+  padding: 12px 28px;
+  background-color: #D46CA8;
+  color: #fff;
+  border: none;
+  border-radius: 0 18px 18px 0;
+  cursor: pointer;
+  font-size: 16px;
+}
+/* フィルターボタン */
+.blog-filter-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+.blog-filter-btn {
+  padding: 8px 20px;
+  border-radius: 20px;
+  border: 2px solid #D46CA8;
+  background: #fff;
+  color: #D46CA8;
+  cursor: pointer;
+  font-size: 15px;
+}
+.blog-filter-btn.active {
+  background-color: #D46CA8;
+  color: #fff;
+}
+.hidden {
+  display: none;
+}
+/* ブログコンテンツ */
+.top-blog-link {
+  display: block;
+  border-radius: 12px; 
+}
+.top-blog-content-photo {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  width: 100%;
+  height: auto;
+}
+.top-blog-link:hover .top-blog-content-photo {
+  transform: scale(1.08);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
 /*=================================
             contact
 =================================*/
+/* 全体 */
+.contact-form {
+  width: 90%;
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+/* ブロック */
+.form-block {
+  margin-bottom: 50px;
+}
+/* タイトル（ピンクライン・丸アイコン） */
+.form-title {
+  font-size: 20px;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+.dot.pink {
+  width: 14px;
+  height: 14px;
+  background-color: #DD5B9C;
+  border-radius: 50%;
+  display: inline-block;
+}
+.form-note {
+  margin-left: 10px;
+  font-size: 14px;
+  color: #999;
+}
+/* メニューグループ見出し */
+.menu-group-title {
+  font-weight: 600;
+  margin: 20px 0 5px;
+  color: #DD5B9C;
+  border-bottom: 1px solid #DD5B9C;
+  padding-bottom: 3px;
+}
+/* 入力フォーム全般 */
+.form-input,
+.form-textarea {
+  width: 100%;
+  border: 1px solid #DD5B9C;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+.form-textarea {
+  height: 200px;
+}
+.form-label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+/* 送信ボタン */
+.form-submit-area {
+  text-align: center;
+}
+.form-submit {
+  background-color: #DD5B9C;
+  color: #fff;
+  padding: 12px 40px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+.form-submit:hover {
+  background-color: #189FBA;
+}
+.contact-access-link {
+  text-decoration: underline;  
+  color: #189FBA;             
+  font-weight: 500;    
+}
+.contact-access-link:hover {
+  opacity: 0.7;
+  color: #DD5B9C;              
+}
+.required-mark {
+  color: #DD5B9C;
+  background: #FFE8F2;
+  border: 1px solid #DD5B9C;
+  padding: 3px 6px;
+  margin-left: 8px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
 /*=================================
             privacy
 =================================*/
-
+.privacy-inner {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 900px;
+  width: 100%;
+}
+.privacy-title {
+  font-size: 32px;
+  color: #DD5B9C;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+.privacy-icon {
+  width: 20px;
+  height: auto;
+}
+.privacy-lead {
+  font-size: 18px;
+  margin-bottom: 40px;
+  color: #444;
+  line-height: 1.8;
+}
+.privacy-heading {
+  font-size: 22px;
+  color: #DD5B9C;
+  margin-top: 40px;
+  margin-bottom: 12px;
+  border-left: 5px solid #DD5B9C;
+  padding-left: 12px;
+}
+.privacy-text {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.9;
+  margin-bottom: 20px;
+}
+.privacy-list {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+.privacy-list li {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.8;
+  margin-bottom: 6px;
+}
 /* ======================メディアクエリ始まり=========================*/
 @media(width<760px){
 /*=================================
@@ -1238,6 +1513,7 @@ footer{
     margin: 0 auto;
     width: 200px;
   }
+
 /*=================================
             フッター
 =================================*/
@@ -1358,6 +1634,9 @@ footer{
   text-align: center;
 }
 /* ブログ */
+.top-sns{
+  padding: 100px 20px;
+}
 .top-blog-contents{
   flex-direction: column;
   gap: 25px;
@@ -1367,6 +1646,9 @@ footer{
   gap: 25px;
 }
 /* アクセス */
+.access{
+  padding: 100px 20px;
+}
 .access-contents {
   flex-direction: column;
   gap: 30px;
@@ -1440,11 +1722,32 @@ footer{
 /*=================================
             blog
 =================================*/
+.blog-contents-area {
+  grid-template-columns: 1fr; 
+  gap: 30px;
+}
+.blog-filter-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+.blog-filter-btn {
+  padding: 5px;
+  border-radius: 20px;
+  border: 2px solid #D46CA8;
+  background: #fff;
+  color: #D46CA8;
+  cursor: pointer;
+  font-size: 15px;
+}
 /*=================================
             contact
 =================================*/
 /*=================================
             privacy
 =================================*/
-}
+/* 少しズレる？ */
+
 /* ======================メディアクエリ終わり=========================*/
+}

@@ -45,15 +45,15 @@ $(function(){
             </div>
             <nav class="header-nav">
                 <ul class="header-nav-list">
-                    <li class="header-nav-item"><a href="index.html">Menu</a></li>
-                    <li class="header-nav-item"><a href="../profile/index.html">Profile</a></li>
+                    <li class="header-nav-item"><a href="../menu/index.html">Menu</a></li>
+                    <li class="header-nav-item"><a href="../index.html">Profile</a></li>
                     <li class="header-nav-item"><a href="../blog/index.html">Blog</a></li>
                     <li class="header-nav-item"><a href="../index.html#Access">Access</a></li>
                 </ul>
             </nav>
             <!-- お問い合わせボタン -->
             <div class="header-button">
-                <a href="../contact/index/html">お問い合わせ</a>
+                <a href="index.html">お問い合わせ</a>
             </div>
             
             <!-- ハンバーガーボタン（スマホ用） -->
@@ -65,13 +65,13 @@ $(function(){
             <!-- ハンバーガーメニュー（メニュー内容） -->
             <nav class="header-sp-nav" id="spNav">
                 <ul class="header-nav-list">
-                    <li class="header-nav-item"><a href="index.html">Menu</a></li>
-                    <li class="header-nav-item"><a href="../profile/index.html">Profile</a></li>
+                    <li class="header-nav-item"><a href="../menu/index.html">Menu</a></li>
+                    <li class="header-nav-item"><a href="../index.html">Profile</a></li>
                     <li class="header-nav-item"><a href="../blog/index.html">Blog</a></li>
                     <li class="header-nav-item"><a href="../index.html#Access">Access</a></li>
                 </ul>
                 <div class="header-sp-button">
-                    <a href="../contact/index/html">お問い合わせ</a>
+                    <a href="index.html">お問い合わせ</a>
                 </div>
             </nav>            
         </div>
@@ -83,25 +83,107 @@ $(function(){
         <div class="blob"></div>
         <div class="blob"></div>
         </div> -->
-    <main>
-        <section class="#">
+    <main id="profile">
+        <section class="under">
             <!-- 下層トップメニュー -->
-            <div class="under-title">
-                <h1 class="under-title-text">Menu</h1>
+            <div class="under-title blue">
+                <h1 class="under-title-text">Contact</h1>
             </div>
             <!-- パンくずリスト -->
             <div class="under-title-panlist">
                 <p class="under-title-panlist-before"><a href="../index.html">TOP</a></p>
                 <p>&gt;</p>
-                <p>Menu</p>
+                <p class="under-title-panlist-now">Contact</p>
             </div>
-            <div class="section-title-inner">
-                <img class="section-title-inner-photo" src="../img/title-turquoise.png" alt="ターコイズ色のカラーボトル" width="14" height="39">
-                <h2 class="section-title-inner-text">理想から探す</h2>
-            </div>
+            <!-- タイトル -->     
+            <section class="under-contents">                  
+                <div class="section-title">
+                    <div class="section-title-inner">
+                        <img class="section-title-inner-photo" src="../img/title-turquoise.png" alt="ターコイズ色のカラーボトル" width="14" height="39">
+                        <h2 class="section-title-inner-text">お問い合わせ&予約フォーム</h2>
+                    </div>
+                </div>
+                <section class="contact-form">
+                    <form id="contact-form">
+                        <!-- お名前 -->
+                        <div class="form-block">
+                            <h3 class="form-title"><span class="dot pink"></span> お名前<span class="required-mark">必須</span></h3>
+                            <input type="text" name="your-name" class="form-input" required>
+                        </div>
+                        <!-- ご連絡先 -->
+                        <div class="form-block">
+                            <h3 class="form-title"><span class="dot pink"></span> ご連絡先</h3>
+                    
+                            <label class="form-label">メールアドレス<span class="required-mark">必須</span></label>
+                            <input type="email" name="your-email" class="form-input" required>
+                    
+                            <label class="form-label">電話番号<span class="required-mark">必須</span></label>
+                            <input type="tel" name="your-tel" class="form-input" required>
+                        </div>
+                    
+                        <!-- メニュー内容 -->
+                        <div class="form-block">
+                            <h3 class="form-title"><span class="dot pink"></span> メニュー内容
+                                <span class="form-note">複数選択可能</span>
+                            </h3>
+                            <!-- メニューグループ -->
+                            <div class="menu-group">
+                                <p class="menu-group-title">TCカラーセラピーセッション&講座</p>
+                                <label><input type="checkbox" name="menu[]" value="カラーセラピーセッション"> TCカラーセラピーセッション</label>
+                                <label><input type="checkbox" name="menu[]" value="カラーセラピスト養成講座"> カラーセラピスト養成講座</label>
+                                <label><input type="checkbox" name="menu[]" value="才能発見Grace講座:Step1.才能発見Graceセッション"> 才能発見Grace講座:Step1.才能発見Graceセッション</label>
+                                <label><input type="checkbox" name="menu[]" value="才能発見Grace講座:Step2.人の才能発見講座"> 才能発見Grace講座:Step2.人の才能発見講座</label>
+                            </div>
+                            <div class="menu-group">
+                                <p class="menu-group-title">カラータイプ診断＆講座</p>
+                                <label><input type="checkbox" name="menu[]" value="カラータイプ診断"> カラータイプ診断</label>
+                                <label><input type="checkbox" name="menu[]" value="カラータイプアドバイザー講座"> カラータイプアドバイザー認定講座</label>
+                                <label><input type="checkbox" name="menu[]" value="カラータイプforKIDS講座:ほめ方しかり方講座"> カラータイプforKIDS講座:ほめ方しかり方講座</label>
+                                <label><input type="checkbox" name="menu[]" value="カラータイプforKIDS講座:頭の良くなる勉強法"> カラータイプforKIDS講座:頭の良くなる勉強法</label>
+                            </div>
+                            <div class="menu-group">
+                                <p class="menu-group-title">パーソナル診断</p>
+                                <label><input type="checkbox" name="menu[]" value="パーソナルカラー診断"> パーソナルカラー診断</label>
+                                <label><input type="checkbox" name="menu[]" value="美Body診断（骨格診断）"> 美Body診断（骨格診断）</label>
+                            </div>
+                            <div class="menu-group">
+                                <p class="menu-group-title">栄養カウンセリング</p>
+                                <label><input type="checkbox" name="menu[]" value="薬剤師による栄養カウンセリング"> 薬剤師による栄養カウンセリング</label>
+                            </div>
+                        </div>
+                        <!-- 受講方法 -->
+                        <div class="form-block">
+                            <h3 class="form-title"><span class="dot pink"></span> 受講方法</h3>
+                            <label><input type="radio" name="style" value="オンライン（Zoom）" checked> オンライン（Zoom）</label>
+                            <label><input type="radio" name="style" value="対面（場所はこちら）"> 対面（場所は<a class="contact-access-link" href="../index.html#Access" target="_blank" rel="noopener noreferrer">こちら</a>）</label>
+                        </div>
+                        <!-- ご連絡事項 -->
+                        <div class="form-block">
+                            <h3 class="form-title"><span class="dot pink"></span> ご連絡事項<span class="required-mark">必須</span></h3>
+                            <p class="form-description">
+                                3つほどご希望の日時をご記入ください。<br>
+                                講座の場合、教材の配送に1週間ほどかかるため1週間後以降の日時をご記載ください。
+                            </p>
+                            <textarea name="message" class="form-textarea" required></textarea>
+                        </div>
+                        <!-- 決済方法 -->
+                        <div class="form-block">
+                            <h3 class="form-title"><span class="dot pink"></span> 決済方法</h3>
+                            <p class="form-description">
+                                決済方法はPayPalまたは、クレジットカードがご利用になれます。<br>
+                                ご予約の決定後、決済方法をご連絡いたします。<br>
+                                決済後に教材を郵送いたします。郵送には7日間ほどかかる場合がございますので、早めのご対応をお願いします。
+                            </p>
+                        </div>
+                        <!-- 送信ボタン -->
+                        <div class="form-submit-area">
+                            <button type="submit" class="form-submit" id="form-submit">送信する</button>
+                        </div>
+                    </form>
+                </section>
+                        
+            </section>
         </section>
-                
-        
         
             <!-- top戻るボタン -->
         <div class="button-back" id="backToTop">
@@ -119,14 +201,14 @@ $(function(){
             </div>
             <nav class="footer-nav">
                 <ul class="footer-nav-list">
-                    <li class="footer-nav-item"><a href="index.html">Menu</a></li>
-                    <li class="footer-nav-item"><a href="../profile/index.html">Profile</a></li>
-                    <li class="footer-nav-item"><a href="../blog/index.html">Blog</a></li>
+                    <li class="footer-nav-item"><a href="../menu/index.html">Menu</a></li>
+                    <li class="footer-nav-item"><a href="../index.html">Profile</a></li>
+                    <li class="footer-nav-item"><a href="index.html">Blog</a></li>
                     <li class="footer-nav-item"><a href="../index.html#Access">Access</a></li>
                 </ul>
             </nav> 
             <div class="footer-button">
-                <a href="../contact/index/html">お問い合わせ</a>
+                <a href="index.html">お問い合わせ</a>
             </div>      
             <div class="footer-sns">
                 <img class="footer-sns-icon" src="../img/footer-instagram.png" alt="Instagramのアイコン" width="66" height="66">
@@ -150,5 +232,9 @@ $(function(){
 <script src="../js/backtotop.js"></script>
 <!-- 動く流体 -->
 <script src="../js/babble.js"></script>
+<!-- ブログ検索 -->
+<script src="../js/blog-filter.js"></script>
+<!-- お問い合わせフォームエラー -->
+<script src="../js/contact-error.js"></script>
 </body>
 </html>

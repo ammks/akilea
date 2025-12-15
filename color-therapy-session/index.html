@@ -53,7 +53,7 @@ $(function(){
             </nav>
             <!-- お問い合わせボタン -->
             <div class="header-button">
-                <a href="../contact/index/html">お問い合わせ</a>
+                <a href="../contact/index.html">お問い合わせ</a>
             </div>
             
             <!-- ハンバーガーボタン（スマホ用） -->
@@ -71,7 +71,7 @@ $(function(){
                     <li class="header-nav-item"><a href="../index.html#Access">Access</a></li>
                 </ul>
                 <div class="header-sp-button">
-                    <a href="../contact/index/html">お問い合わせ</a>
+                    <a href="../contact/index.html">お問い合わせ</a>
                 </div>
             </nav>            
         </div>
@@ -86,7 +86,7 @@ $(function(){
     <main>
         <section class="under">
             <!-- 下層トップメニュー -->
-            <div class="under-title">
+            <div class="under-title yellow">
                 <h1 class="under-title-text">カラーセラピーセッション</h1>
             </div>
             <!-- パンくずリスト -->
@@ -232,11 +232,12 @@ $(function(){
                     </div>                 
                 </section>
             </section>
-        </section>
-                
-        
-        
-            <!-- top戻るボタン -->
+        </section>    
+        <!-- 予約するボタン常に -->
+        <div class="fixed-reserve-button" id="reserveButton">
+            <a href="../contact/index.html">予約する</a>
+        </div>        
+        <!-- top戻るボタン -->
         <div class="button-back" id="backToTop">
             <a href="#back"><p>topに戻る</p></a>
         </div>
@@ -259,7 +260,7 @@ $(function(){
                 </ul>
             </nav> 
             <div class="footer-button">
-                <a href="../contact/index/html">お問い合わせ</a>
+                <a href="../contact/index.html">お問い合わせ</a>
             </div>      
             <div class="footer-sns">
                 <img class="footer-sns-icon" src="../img/footer-instagram.png" alt="Instagramのアイコン" width="66" height="66">
@@ -283,5 +284,7 @@ $(function(){
 <script src="../js/backtotop.js"></script>
 <!-- 動く流体 -->
 <script src="../js/babble.js"></script>
+<!-- 予約するボタン -->
+<script src="../js/menu-reserve.js"></script>
 </body>
 </html>
