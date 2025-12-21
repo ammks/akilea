@@ -7,7 +7,7 @@ img{max-width: 100%;height:auto;}
 =================================*/
 /* フォント */
 h1 {
-    color:#371C2A;
+    color:#5d5257;
     font-family: "Bodoni Moda","Shippori Mincho B1", serif;
     font-optical-sizing: auto;
     font-weight: 800;
@@ -16,7 +16,7 @@ h1 {
     letter-spacing: 0.2em;
 }
 h2 {
-    color:#371C2A;
+    color:#4a4648;
     font-family: "Bodoni Moda","Shippori Mincho B1", serif;
     font-optical-sizing: auto;
     font-weight: 800;
@@ -25,7 +25,7 @@ h2 {
     letter-spacing: 0.2em;
 }
 h3 {
-    color:#371C2A;
+    color:#5d5257;
     font-family: "Bodoni Moda","Shippori Mincho B1", serif;
     font-optical-sizing: auto;
     font-weight: 600;
@@ -34,7 +34,7 @@ h3 {
     letter-spacing: 0.2em;
 }
 h4 {
-    color:#371C2A;
+    color:#5d5257;
     font-family: "Bodoni Moda","Shippori Mincho B1", serif;
     font-optical-sizing: auto;
     font-weight: 600;
@@ -43,7 +43,7 @@ h4 {
     letter-spacing: 0.2em;
 }
 p {
-    color:#371C2A;
+    color:#5d5257;
     font-family: "Noto Sans JP", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
@@ -77,7 +77,7 @@ html {
   font-family: "Noto Sans Japanese";
   line-height: 1.8;
   text-decoration: none;
-  color: #371C2A;
+  color: #5d5257;
   transition: 0.3s ease-in-out;
   font-weight: 500;
 }
@@ -186,7 +186,7 @@ html {
   position: fixed;
   left: 0;
   top: 0;
-  z-index: 0;
+  z-index: -1111;
   width: 100%;
   height: 100vh;
   overflow: hidden;
@@ -216,7 +216,7 @@ html {
   top: 150px;
   width: 350px;
   height: 350px;
-  background: radial-gradient(#189FBA 0%, rgba(68, 102, 206, 0) 70%);
+  background: radial-gradient(#985ac5 0%, #985ac500 70%);
 }
 .blob:nth-child(2) {
   animation-duration: 30000ms;
@@ -227,7 +227,7 @@ html {
   top: -250px;
   width: 500px;
   height: 500px;
-  background: radial-gradient(#9844b7  0%, rgba(249, 215, 122, 0) 70%);
+  background: radial-gradient(#189FBA  0%, #189FBA00 60%);
 }
 .blob:nth-child(3) {
   animation-duration: 25000ms;
@@ -237,7 +237,7 @@ html {
   top: 300px;
   width: 700px;
   height: 700px;
-  background: radial-gradient(#DD5B9C 0%, rgba(193, 26, 81, 0) 70%);
+  background: radial-gradient(#DD5B9C 0%, #DD5B9C00 60%);
 }
 /* タイトル */
 .section-title{
@@ -269,7 +269,7 @@ html {
   height: 70px;
   border-radius: 9999px;
   margin: 10px ; 
-  background: rgba(255, 255, 255, 0.9);
+  background: #ffffff88;
   backdrop-filter: blur(8px); 
   transition: opacity 0.5s ease, transform 0.5s ease;
   z-index: 9999;
@@ -294,6 +294,10 @@ html {
   gap: 5px;
   z-index: 9000;
 }
+.header-logo-photo{
+  width: 36px;
+  height: 36px;
+}
 .header-logo-text {
   font-family: "Bodoni Moda", "Noto Sans JP", sans-serif;
   font-size: 16px;
@@ -317,7 +321,6 @@ html {
   font-weight: 700;
   letter-spacing: 0.2em;
   color: #DD5B9C;
-  /* color: #371C2A; */
 }
 .header-nav-item a:hover{
   color: #189FBA;
@@ -405,7 +408,6 @@ html {
 footer{
   width: 100%;
   height: auto;
-  /* background-color: #DD5B9C; */
   background: linear-gradient(249deg, #DD5B9C, #189FBA, #CEF1F7, #F5B8CC, #9FD9F6);
   background-size: 1400% 1400%;
   animation: GradientBackground 15s ease infinite;
@@ -424,7 +426,7 @@ footer{
   gap: 15px;
 }
 .footer-logo-icon{
-  width: 20%;
+  width: 15%;
 }
 .footer-logo-text{
   color: #fff;
@@ -501,7 +503,7 @@ footer{
 /* mv */
 .mv {
   /* グラデ */
-  background: linear-gradient(249deg, #DD5B9C, #189FBA, #CEF1F7, #FEF2FF, #F5B8CC, #9FD9F6, #FFE9F0);
+  background: linear-gradient(249deg, #DD5B9C, #189FBA, #b0ebf555, #f9d5fc55, #f69ab855, #7fcdf555, #fbccdb55);
   background-size: 1400% 1400%;
   animation: GradientBackground 15s ease infinite;
 }
@@ -538,8 +540,8 @@ footer{
 }
 .mv-catch h1 {
   line-height: 1.7;
-  /* color: silver; */
-  color: #DD5B9C;
+  color: silver;
+  /* color: #DD5B9C; */
   text-align: left;
   font-size: 48px;
 }
@@ -588,7 +590,7 @@ footer{
   justify-content: center;
   align-items: center;
   gap: 25px;
-  background-color: #fff;
+  background-color: #ffffff55;
 }
 .concept-message-en{
   color: #FFE9F0;
@@ -617,17 +619,18 @@ footer{
 /* メニュー */
 .top-menu{
   width: 100%;
-  padding: 8.25% 0; 
-  background-color: #FEF5FF;
+  padding: 8.25%; 
+  background-color: #f9dcfd55;
 }
 .menu-contents{
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   gap: 25px;
 }
 .menu-content{
-  width: 30%;
+  width: 33%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -636,9 +639,10 @@ footer{
 }
 .menu-content-type{
   color: #189FBA;
+  text-align: center;
 }
 .menu-content-inner{
-  height: 500px;
+  height: 550px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -655,42 +659,43 @@ footer{
 .menu-content-inner-title{
   color: #DD5B9C;
 }
+.menu-content-inner-text{
+  margin-top: 15px;
+}
 /* お客様からの声 */
 .top-voice{
   width: 100%;
   padding: 8.25%; 
-  background-color: #fff;
+  background-color: #ffffff55;
 }
 .voice-scroll {
   display: flex;
-  gap: 40px;
+  gap: 30px;
   overflow-x: auto;
-  padding: 20px 40px;
+  padding: 0 20px;
   scroll-snap-type: x mandatory;
+  overflow-y: hidden;
 }
 .voice-scroll::-webkit-scrollbar {
-  height: 8px;              /* 横スクロールバーの太さ */
+  height: 5px;
 }
 .voice-scroll::-webkit-scrollbar-track {
-  background: #f7d5e5;       /* バー背景（薄ピンク） */
+  background: #f7d5e5; 
   border-radius: 10px;
 }
 .voice-scroll::-webkit-scrollbar-thumb {
-  background: #DD5B9C;       /* バー本体（濃ピンク） */
+  background: #DD5B9C;  
   border-radius: 10px;
-}
-.voice-scroll::-webkit-scrollbar-thumb:hover {
-  background: #c64584;       /* ホバー時の濃いピンク */
 }
 .voice-card {
   position: relative;
-  flex: 0 0 250px;   /* カード幅 */
+  flex: 0 0 260px;
   flex-shrink: 0;
-  height: 450px;    /* ボトル画像＋テキスト */
-  padding-top: 170px; /* 画像の高さぶん余白を取る */
+  height: 660px;
+  padding-top: 170px;
   background-repeat: no-repeat;
   background-position: top center;
-  background-size: 180px auto; /* ボトル画像の大きさ調整 */
+  background-size: 180px auto;
   scroll-snap-align: start;
   border-radius: 14px;
 }
@@ -720,8 +725,9 @@ footer{
 }
 /* プロフィール */
 .top-profile {
-  padding: 8.25% 0; 
-  background-color: #FEF5FF;
+  padding: 8.25%; 
+  /* background-color: #FEF5FF; */
+  background-color: #f9dcfd55;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -754,7 +760,7 @@ footer{
 }
 /* ブログ */
 .top-sns {
-  padding: 8.25% 0;
+  padding: 8.25%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -805,7 +811,7 @@ footer{
 /* アクセス */
 .access {
   padding: 8.25%;
-  background-color: #FEF5FF;
+  background-color: #f9dcfd55;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -844,6 +850,7 @@ footer{
 .access-info {
   width: 50%;
   margin-left: 25px;
+  color: #5d5257;
 }
 .access-info dt {
   display: inline-block;
@@ -881,7 +888,7 @@ footer{
             menu
 =================================*/
 .under{
-  background-color: #FEF5FF;
+  background-color: #f9dcfd55;
 }
 /* 下層トップメニュー */
 .under-title{
@@ -924,6 +931,7 @@ footer{
   align-items: center;
   gap: 10px;
   padding: 0 15px;
+  background-color: #f9dcfd55;
 }
 .under-title-panlist-before a{
   color: #DD5B9C;
@@ -932,7 +940,8 @@ footer{
   color: #189FBA;
 }
 .under-contents{
-  padding: 8.25% 0;
+  padding: 8.25%;
+  background-color: #f9dcfd55;
 }
 /* 各メニューの料金表 */
 .menu-types{
@@ -999,9 +1008,6 @@ footer{
   align-items: flex-start;
   gap: 15px;
   margin-bottom: 50px;
-  /* background-color: #FFE9F0;
-  border: 1px solid #DD5B9C;
-  border-radius: 14px; */
   padding: 15px;
 }
 .menu-card-photo {
@@ -1022,7 +1028,7 @@ footer{
   position: absolute;
   left: 0;
   top: 50%;
-  transform: translateY(-50%); /* 垂直中央寄せ */
+  transform: translateY(-50%);
 }
 .menu-card-tag {
   width: 110px;
@@ -1044,6 +1050,7 @@ footer{
   justify-content: flex-start;
   align-items: center;
   gap: 20px;
+  color: #5d5257;
 }
 .menu-card-info dt {
   width: 90px;
@@ -1087,8 +1094,9 @@ footer{
   box-shadow: 0 6px 16px rgba(0,0,0,0.15);
 }
 .fixed-reserve-button a:hover {
-  background: #189FBA;
+  background: #DD5B9C;
   transform: translateY(-5px);
+  border: 2px solid #189FBA;
 }
 /*=================================
             menu詳細
@@ -1102,7 +1110,7 @@ footer{
   gap: 50px;
 }
 .menu-block{
-  width: 70%;
+  width: 80%;
 }
 .menu-block-title{
   display: flex;
@@ -1131,6 +1139,7 @@ footer{
 .menu-block-text{
   margin-left: 25px;
   font-family: "Noto Sans JP", sans-serif;
+  color: #5d5257;
 }
 .menu-block-step-contents{
   display: flex;
@@ -1164,7 +1173,7 @@ footer{
             profile
 =================================*/
 #profile .top-concept{
-  background-color: #FEF5FF;
+  background-color: #f9dcfd55;
 }
 .profile-introduction{
   display: flex;
@@ -1224,8 +1233,8 @@ footer{
   align-items: flex-start;
   gap: 20px;
   padding: 20px 0;
-  border-bottom: 1px solid #DD5B9C;
   position: relative;
+  color: #5d5257;
 }
 .company-row:after {
   content: "";
@@ -1337,7 +1346,7 @@ footer{
 /* タイトル（ピンクライン・丸アイコン） */
 .form-title {
   font-size: 20px;
-  color: #333;
+  color: #5d5257;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -1381,6 +1390,11 @@ footer{
   display: block;
   margin-bottom: 8px;
   font-size: 15px;
+  color: #5d5257;
+}
+.label-checkbox,
+.label-radio {
+  color: #5d5257;
 }
 /* 送信ボタン */
 .form-submit-area {
@@ -1443,7 +1457,6 @@ footer{
 .privacy-lead {
   font-size: 18px;
   margin-bottom: 40px;
-  color: #444;
   line-height: 1.8;
 }
 .privacy-heading {
@@ -1456,7 +1469,6 @@ footer{
 }
 .privacy-text {
   font-size: 16px;
-  color: #333;
   line-height: 1.9;
   margin-bottom: 20px;
 }
@@ -1466,9 +1478,9 @@ footer{
 }
 .privacy-list li {
   font-size: 16px;
-  color: #333;
   line-height: 1.8;
   margin-bottom: 6px;
+  color: #5d5257;
 }
 /* ======================メディアクエリ始まり=========================*/
 @media(width<760px){
@@ -1608,7 +1620,7 @@ footer{
   padding: 100px 20px;
 }
 .voice-card {
-  flex: 0 0 80%;
+  flex: 0 0 250px;
 }
 /* プロフィール */
 .top-profile{
@@ -1663,8 +1675,6 @@ footer{
   width: 100%;
   flex-direction: column;
 }
-/* 予約ボタンが消える謎 */
-
 /*=================================
             menu
 =================================*/
@@ -1681,8 +1691,11 @@ footer{
 .menu-block{
   width: 100%;
 }
+.menu-block-photos{
+  justify-content: center;
+}
 .menu-block-photo{
-  max-width: 400px;
+  max-width: 300px;
 }
 .menu-block-step-contents{
   justify-content: center;
